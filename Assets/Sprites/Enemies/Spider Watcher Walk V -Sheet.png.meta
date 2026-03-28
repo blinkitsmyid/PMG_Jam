@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spider Watcher Walk V -Sheet_0: -7549809650667616680
+      Spider Watcher Walk V -Sheet_1: -3401903786249415257
+      Spider Watcher Walk V -Sheet_2: 8517204248804516534
+      Spider Watcher Walk V -Sheet_3: 7164814334938136669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

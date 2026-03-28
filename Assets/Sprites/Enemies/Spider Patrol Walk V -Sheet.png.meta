@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spider Patrol Walk V -Sheet_0: 5177700024592654997
+      Spider Patrol Walk V -Sheet_1: -1753098964928058985
+      Spider Patrol Walk V -Sheet_2: 351571430348067951
+      Spider Patrol Walk V -Sheet_3: 8218190678875401446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
