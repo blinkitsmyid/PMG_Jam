@@ -21,13 +21,18 @@ public class LampManager : MonoBehaviour
 
     public void RegisterLamp(Lamp lamp)
     {
-        Debug.Log("Lamp registered: " + lamp.name);
+        if (!lamps.Contains(lamp))
+        {
+            lamps.Add(lamp);
+            Debug.Log("Lamp registered: " + lamp.name);
+        }
     }
 
     public bool AreAllLampsOff()
     {
         foreach (var lamp in lamps)
         {
+            Debug.Log("AreAllLampsOff: " + lamp.name);
             if (lamp.IsOn())
                 return false;
         }

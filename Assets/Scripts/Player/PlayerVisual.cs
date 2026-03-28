@@ -2,66 +2,30 @@ using UnityEngine;
 
 public class PlayerVisual : MonoBehaviour
 {
-    //private static readonly int Die = Animator.StringToHash(IsDie);
-    //private static readonly int Running = Animator.StringToHash(IsRunning);
-    //private Animator _animator;
-    private SpriteRenderer _spriteRenderer;
-    //private FlashBlink _flashBlink;
+    private Animator _animator;
 
-    private const string IsRunning = "IsRunning";
-    private const string IsDie = "IsDie";
-    [SerializeField]private Sprite leftSprite;
-    [SerializeField]private Sprite rightSprite;
-    [SerializeField]private Sprite upSprite;
-    [SerializeField]private Sprite downSprite;
+    private static readonly int MoveX = Animator.StringToHash("MoveX");
+    private static readonly int MoveY = Animator.StringToHash("MoveY");
+    private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+    private static readonly int IsRunning = Animator.StringToHash("IsRunning");
+   
     private void Awake()
     {
-        //_animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        //_flashBlink = GetComponent<FlashBlink>();
-    }
-
-    private void Start()
-    {
-        //Player.Instance.OnPlayerDeath += Player_OnPlayerDeath;
-    }
-
-    private void Player_OnPlayerDeath(object sender, System.EventArgs e)
-    {
-        //_animator.SetBool(Die, true);
-        //_flashBlink.StopBlinking();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        //_animator.SetBool(Running, Player.Instance.IsRunning());
-        AdjustPlayerFacingDirection();
-    }
-    private void AdjustPlayerFacingDirection()
-    {
-        Vector2 dir = GameInput.Instance.GetMovementVector();
+        Vector2 input = PlayerController.Instance.GetInputVector();
 
-        if (dir == Vector2.zero) return;
-
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-        {
-            // горизонталь
-            if (dir.x > 0)
-                _spriteRenderer.sprite = rightSprite;
-            else
-                _spriteRenderer.sprite = leftSprite;
-        }
-        else
-        {
-            // вертикаль
-            if (dir.y > 0)
-                _spriteRenderer.sprite = upSprite;
-            else
-                _spriteRenderer.sprite = downSprite;
-        }
-    }
-    private void OnDestroy()
-    {
-        
+        if (input.magnitude > 1f)
+            input = input.normalized;
+        _animator.SetFloat(MoveX, input.x);
+        _animator.SetFloat(MoveY, input.y);
+       
+        bool isMoving = input.magnitude > 0.1f;
+        Debug.Log(isMoving);
+        _animator.SetBool(IsMoving, isMoving);
+        _animator.SetBool(IsRunning, PlayerController.Instance.IsRunning());
     }
 }
