@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 92151035a6673ba4db8034352ca94515
+=======
+guid: 96dc79b2610d8b64280649550481355e
+>>>>>>> origin/Jane
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7

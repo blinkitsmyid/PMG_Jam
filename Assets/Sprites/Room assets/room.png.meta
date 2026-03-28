@@ -88,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -124,8 +124,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -154,12 +154,12 @@ TextureImporter:
       name: room_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 103
-        width: 35
-        height: 19
+        x: 1
+        y: 104
+        width: 33
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: room_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 83
-        width: 35
-        height: 20
+        x: 1
+        y: 84
+        width: 33
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: room_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 103
-        width: 35
-        height: 19
+        x: 35
+        y: 104
+        width: 33
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: room_3
       rect:
         serializedVersion: 2
-        x: 34
-        y: 83
-        width: 35
-        height: 20
+        x: 35
+        y: 84
+        width: 33
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: room_4
       rect:
         serializedVersion: 2
-        x: 68
-        y: 56
-        width: 34
-        height: 66
+        x: 69
+        y: 57
+        width: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: room_5
       rect:
         serializedVersion: 2
-        x: 101
-        y: 60
-        width: 30
-        height: 62
+        x: 102
+        y: 61
+        width: 28
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,12 +280,12 @@ TextureImporter:
       name: room_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 66
-        width: 18
-        height: 18
+        x: 1
+        y: 67
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,11 +302,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 58
-        width: 51
-        height: 26
+        y: 67
+        width: 17
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,12 +322,12 @@ TextureImporter:
       name: room_8
       rect:
         serializedVersion: 2
-        x: 34
-        y: 78
-        width: 34
-        height: 6
+        x: 35
+        y: 79
+        width: 32
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,12 +343,12 @@ TextureImporter:
       name: room_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 49
-        width: 18
-        height: 18
+        x: 1
+        y: 50
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,12 +364,12 @@ TextureImporter:
       name: room_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 50
-        height: 50
+        x: 1
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,12 +385,12 @@ TextureImporter:
       name: room_11
       rect:
         serializedVersion: 2
-        x: 17
-        y: 49
-        width: 18
-        height: 18
+        x: 18
+        y: 50
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,12 +406,12 @@ TextureImporter:
       name: room_12
       rect:
         serializedVersion: 2
-        x: 49
-        y: 16
-        width: 34
-        height: 34
+        x: 50
+        y: 17
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,12 +427,12 @@ TextureImporter:
       name: room_13
       rect:
         serializedVersion: 2
-        x: 82
-        y: 32
-        width: 18
-        height: 18
+        x: 83
+        y: 33
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,12 +448,12 @@ TextureImporter:
       name: room_14
       rect:
         serializedVersion: 2
-        x: 99
-        y: 31
-        width: 34
-        height: 19
+        x: 100
+        y: 32
+        width: 32
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -469,12 +469,12 @@ TextureImporter:
       name: room_15
       rect:
         serializedVersion: 2
-        x: 99
-        y: 25
-        width: 34
-        height: 7
+        x: 100
+        y: 26
+        width: 32
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -490,12 +490,12 @@ TextureImporter:
       name: room_16
       rect:
         serializedVersion: 2
-        x: 100
-        y: 7
-        width: 19
-        height: 19
+        x: 101
+        y: 8
+        width: 17
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -511,12 +511,12 @@ TextureImporter:
       name: room_17
       rect:
         serializedVersion: 2
-        x: 100
-        y: 1
-        width: 19
-        height: 7
+        x: 101
+        y: 2
+        width: 17
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -531,14 +531,32 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b53bb6989dc9c3342bf46eab252dffed
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      room_0: 8223760342256937110
+      room_1: 5845250535511975192
+      room_10: 5998742668355188097
+      room_11: -7659227645673764327
+      room_12: -4224920953103130491
+      room_13: 8783437273911562944
+      room_14: -6231915851617436464
+      room_15: 2919079192893519393
+      room_16: 2629086226250093904
+      room_17: 4231325850976413038
+      room_2: 1405465485789638114
+      room_3: 5654006720289389903
+      room_4: -7046822124877184851
+      room_5: -8880918490468353959
+      room_6: 8483688791775144328
+      room_7: -6168251382912983505
+      room_8: -7615754678155447774
+      room_9: 1220376913556758033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

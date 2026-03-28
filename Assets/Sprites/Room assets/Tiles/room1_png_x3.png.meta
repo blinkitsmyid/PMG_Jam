@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: fbe7e7ef94d337a43bd04112796d21ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8713211947315726162
+    second: room1_png_x3_0
+  - first:
+      213: 2784684314579888422
+    second: room1_png_x3_1
+  - first:
+      213: -6561161077628047974
+    second: room1_png_x3_2
+  - first:
+      213: -975673264637447070
+    second: room1_png_x3_3
+  - first:
+      213: -819068418161863069
+    second: room1_png_x3_4
+  - first:
+      213: 2715770485102665385
+    second: room1_png_x3_5
+  - first:
+      213: 3013624785963146144
+    second: room1_png_x3_6
+  - first:
+      213: 2205377875021939396
+    second: room1_png_x3_7
+  - first:
+      213: -176132980218195697
+    second: room1_png_x3_8
+  - first:
+      213: -8575037587500424403
+    second: room1_png_x3_9
+  - first:
+      213: -4963524417986114097
+    second: room1_png_x3_10
+  - first:
+      213: 2327590572177853572
+    second: room1_png_x3_11
+  - first:
+      213: -7861699299385365109
+    second: room1_png_x3_12
+  - first:
+      213: -4000507717362383258
+    second: room1_png_x3_13
+  - first:
+      213: -5589691220077206940
+    second: room1_png_x3_14
+  - first:
+      213: 5767794152966726103
+    second: room1_png_x3_15
+  - first:
+      213: -8243856236867734255
+    second: room1_png_x3_16
+  - first:
+      213: -5086233439917721066
+    second: room1_png_x3_17
+  - first:
+      213: 571659768137904224
+    second: room1_png_x3_18
+  - first:
+      213: -7090719878408687416
+    second: room1_png_x3_19
+  - first:
+      213: 4368111863358461012
+    second: room1_png_x3_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: room1_png_x3_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 312
+        width: 99
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257817cf91c8be870800000000000000
+      internalID: 8713211947315726162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 312
+        width: 99
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629e22651af25a620800000000000000
+      internalID: 2784684314579888422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 171
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d6cdd23c212f4a0800000000000000
+      internalID: -6561161077628047974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 183
+        width: 84
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264707cc556b572f0800000000000000
+      internalID: -975673264637447070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 252
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36698b00d9512a4f0800000000000000
+      internalID: -819068418161863069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 252
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aed8001eda50b520800000000000000
+      internalID: 2715770485102665385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 201
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab55a5a6cb82d920800000000000000
+      internalID: 3013624785963146144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_7
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 201
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c240342e731b9e10800000000000000
+      internalID: 2205377875021939396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 237
+        width: 96
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f011dd8dcff3e8df0800000000000000
+      internalID: -176132980218195697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_9
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 228
+        width: 96
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d232a652fb85ff880800000000000000
+      internalID: -8575037587500424403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 150
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdc5f7f6d40e1bb0800000000000000
+      internalID: -4963524417986114097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 150
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c85351b434d4020800000000000000
+      internalID: 2327590572177853572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 177
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8da239e322a5e290800000000000000
+      internalID: -7861699299385365109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_13
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 177
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66608693d675b78c0800000000000000
+      internalID: -4000507717362383258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462ad27637d6d62b0800000000000000
+      internalID: -5589691220077206940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_15
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 51
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1282919325b0050800000000000000
+      internalID: 5767794152966726103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_16
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 99
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1153c1e2e60f79d80800000000000000
+      internalID: -8243856236867734255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 96
+        width: 96
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61abdf862a11a69b0800000000000000
+      internalID: -5086233439917721066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 78
+        width: 96
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060fd34c781fee700800000000000000
+      internalID: 571659768137904224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_19
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 24
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c036adb6d3b89d90800000000000000
+      internalID: -7090719878408687416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room1_png_x3_20
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 6
+        width: 51
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45496a2b896ae9c30800000000000000
+      internalID: 4368111863358461012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 008e7e4cc2de7344baa3fa5dc2aa5f54
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      room1_png_x3_0: 8713211947315726162
+      room1_png_x3_1: 2784684314579888422
+      room1_png_x3_10: -4963524417986114097
+      room1_png_x3_11: 2327590572177853572
+      room1_png_x3_12: -7861699299385365109
+      room1_png_x3_13: -4000507717362383258
+      room1_png_x3_14: -5589691220077206940
+      room1_png_x3_15: 5767794152966726103
+      room1_png_x3_16: -8243856236867734255
+      room1_png_x3_17: -5086233439917721066
+      room1_png_x3_18: 571659768137904224
+      room1_png_x3_19: -7090719878408687416
+      room1_png_x3_2: -6561161077628047974
+      room1_png_x3_20: 4368111863358461012
+      room1_png_x3_3: -975673264637447070
+      room1_png_x3_4: -819068418161863069
+      room1_png_x3_5: 2715770485102665385
+      room1_png_x3_6: 3013624785963146144
+      room1_png_x3_7: 2205377875021939396
+      room1_png_x3_8: -176132980218195697
+      room1_png_x3_9: -8575037587500424403
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

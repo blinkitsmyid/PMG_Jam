@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e2ee396a1a14b274a986d641159114bf
+=======
+guid: bd5b785d9a48a874b9886e6bbb180c9d
+>>>>>>> origin/Jane
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
