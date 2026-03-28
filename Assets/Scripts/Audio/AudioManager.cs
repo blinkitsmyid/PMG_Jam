@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
     private bool isMusicOn = true;
     private bool isSoundOn = true;
-
+    
     void Awake()
     {
         if (Instance == null)

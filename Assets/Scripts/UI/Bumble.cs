@@ -6,23 +6,29 @@ using TMPro;
 public class Bumble : MonoBehaviour
 {
     [SerializeField]SpriteRenderer _spriteRenderer;
+    [SerializeField]SpriteRenderer _currentSprite;
     [SerializeField] private float defaultDuration = 3f;
     public static Bumble Instance;
     void Awake()
     {
         Instance = this;
+        _currentSprite.enabled = false;
         HideBumble();
     }
     public void ShowBumble(Sprite sprite)
     {
-        if (_spriteRenderer == null) return;
-        _spriteRenderer.sprite = sprite;
+        if (_currentSprite == null || _spriteRenderer == null) return;
+        
+        _currentSprite.sprite = sprite;
+        Debug.Log($"ShowBumble: {_currentSprite}");
+        _currentSprite.enabled = true;
         _spriteRenderer.enabled = true;
     }
 
     public void HideBumble()
     {
         if (_spriteRenderer == null) return;
+        _currentSprite.enabled = false;
         _spriteRenderer.enabled = false;
     }
 

@@ -10,7 +10,10 @@ public class PlayerVisual : MonoBehaviour
 
     private const string IsRunning = "IsRunning";
     private const string IsDie = "IsDie";
-
+    [SerializeField]private Sprite leftSprite;
+    [SerializeField]private Sprite rightSprite;
+    [SerializeField]private Sprite upSprite;
+    [SerializeField]private Sprite downSprite;
     private void Awake()
     {
         //_animator = GetComponent<Animator>();
@@ -36,11 +39,26 @@ public class PlayerVisual : MonoBehaviour
     }
     private void AdjustPlayerFacingDirection()
     {
-        Vector3 mousePos = GameInput.Instance.GetMousePosition();
-        Vector3 playerPosition = PlayerController.Instance.GetPlayerScreenPosition();
+        Vector2 dir = GameInput.Instance.GetMovementVector();
 
-        _spriteRenderer.flipX = mousePos.x < playerPosition.x;
-        _spriteRenderer.flipY = mousePos.y > playerPosition.y;
+        if (dir == Vector2.zero) return;
+
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            // горизонталь
+            if (dir.x > 0)
+                _spriteRenderer.sprite = rightSprite;
+            else
+                _spriteRenderer.sprite = leftSprite;
+        }
+        else
+        {
+            // вертикаль
+            if (dir.y > 0)
+                _spriteRenderer.sprite = upSprite;
+            else
+                _spriteRenderer.sprite = downSprite;
+        }
     }
     private void OnDestroy()
     {
