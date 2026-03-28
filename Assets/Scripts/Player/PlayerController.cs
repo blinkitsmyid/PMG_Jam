@@ -1,0 +1,260 @@
+using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Rendering.Universal;
+
+
+
+[SelectionBase]
+public class PlayerController : MonoBehaviour
+{
+    public static PlayerController Instance { get; private set; }
+
+    [SerializeField] private float movingSpeed = 10f;
+    [Space(20)]
+    [SerializeField] private Light2D flashlight;
+    private bool _isFlashlightOn = true;
+    [SerializeField] private Transform flashlightTransform;
+    private LampSwitch _currentSwitch;
+    private Door _currentDoor;
+    private Vector2 _inputVector;
+    
+    private Rigidbody2D _rb;
+    //private KnockBack _knockBack;
+
+    private readonly float _minMovingSpeed = 0.1f;
+    private bool _isRunning = false;
+        
+    private bool _isAlive;
+    private float _initialMovingSpeed;
+    private bool _isBusy = false;
+    private Camera _mainCamera;
+    private bool _hasUsedToilet = false;
+    [SerializeField] private float runMultiplier = 2f;
+
+    private bool _isRunningInput = false;
+    
+    private void Awake()
+    {
+        Instance = this;
+        _rb = GetComponent<Rigidbody2D>();
+        //_knockBack = GetComponent<KnockBack>();
+
+        _mainCamera = Camera.main;
+        
+        _initialMovingSpeed  = movingSpeed;
+    }
+
+    private void Start()
+    {
+        _isAlive = true;
+        _hasUsedToilet = false;
+        GameInput.Instance.EnableMovement();
+        GameInput.Instance.OnFlashlightToggle += GameInput_OnFlashlightToggle;
+        flashlight.enabled = _isFlashlightOn;
+        GameInput.Instance.OnLampInteract += GameInput_OnLampInteract;
+        GameInput.Instance.OnDoorInteract += GameInput_OnDoorInteract;
+        GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
+        GameInput.Instance.OnRunCanceled += GameInput_OnRunCanceled;
+    }
+    
+    private void Update()
+    {
+        _inputVector = GameInput.Instance.GetMovementVector();
+        
+        if (!_isAlive || _isBusy) return;
+
+        _inputVector = GameInput.Instance.GetMovementVector();
+        RotateFlashlight();
+    }
+  
+    private void OnDestroy()
+    {
+        if (GameInput.Instance != null)
+        {
+            GameInput.Instance.OnFlashlightToggle -= GameInput_OnFlashlightToggle;
+        }
+        
+        if (GameInput.Instance != null)
+        {
+            GameInput.Instance.OnLampInteract -= GameInput_OnLampInteract;
+        }
+        if (GameInput.Instance != null)
+        {
+            GameInput.Instance.OnDoorInteract -= GameInput_OnDoorInteract;
+        }
+        if (GameInput.Instance != null)
+        {
+            GameInput.Instance.OnRunStarted -= GameInput_OnRunStarted;
+            GameInput.Instance.OnRunCanceled -= GameInput_OnRunCanceled;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!_isAlive || _isBusy) return;
+
+      
+        HandleMovement();
+    }
+
+    public bool IsAlive() => _isAlive;
+    
+
+    public void Death()
+    {
+        PanelManager.Instance.Lose();
+    }
+    
+    public bool IsRunning()
+    {
+        return _isRunning;
+    }
+
+    private void HandleMovement()
+    {
+        float speed = movingSpeed;
+
+        if (_isRunningInput)
+        {
+            speed *= runMultiplier;
+        }
+
+        _rb.MovePosition(_rb.position + _inputVector * (speed * Time.fixedDeltaTime));
+
+        if (Mathf.Abs(_inputVector.x) > _minMovingSpeed || Mathf.Abs(_inputVector.y) > _minMovingSpeed)
+        {
+            _isRunning = true;
+        }
+        else
+        {
+            _isRunning = false;
+        }
+    }
+    private void GameInput_OnRunStarted(object sender, EventArgs e)
+    {
+        _isRunningInput = true;
+    }
+
+    private void GameInput_OnRunCanceled(object sender, EventArgs e)
+    {
+        _isRunningInput = false;
+    }
+    public Vector3 GetPlayerScreenPosition()
+    {
+        Vector3 playerScreenPosition = _mainCamera.WorldToScreenPoint(transform.position);
+        return playerScreenPosition;
+    }
+    public void DoToiletRoutine(float duration)
+    {
+        if (_isBusy) return;
+
+        StartCoroutine(ToiletRoutine(duration));
+    }
+    
+    private IEnumerator ToiletRoutine(float duration)
+    {
+        _isBusy = true;
+
+        // остановить движение
+        _inputVector = Vector2.zero;
+
+        // скрыть игрока
+        SetVisible(false);
+
+        // можно отключить инпут полностью
+        GameInput.Instance.DisableMovement();
+
+        yield return new WaitForSeconds(duration);
+
+        // вернуть всё обратно
+        SetVisible(true);
+
+        GameInput.Instance.EnableMovement(); // если есть Enable()
+        _hasUsedToilet = true;
+        _isBusy = false;
+    }
+    
+    public bool HasUsedToilet()
+    {
+        return _hasUsedToilet;
+    }
+    
+    private void GameInput_OnFlashlightToggle(object sender, EventArgs e)
+    {
+        _isFlashlightOn = !_isFlashlightOn;
+        flashlight.enabled = _isFlashlightOn;
+    }
+    private void RotateFlashlight()
+    {
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(GameInput.Instance.GetMousePosition());
+        mouseWorldPos.z = 0f;
+
+        Vector3 direction = mouseWorldPos - flashlightTransform.position;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        flashlightTransform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Light"))
+        {
+            HintUI.Instance.ShowTemporary(HintMessages.PressLightOn);
+            if (collision.TryGetComponent(out LampSwitch lampSwitch))
+            {
+                _currentSwitch = lampSwitch;
+            }
+            
+        }
+        if (collision.TryGetComponent(out Door door))
+        {
+            _currentDoor = door;
+        }
+    }
+    private void GameInput_OnLampInteract(object sender, EventArgs e)
+    {
+        if (_currentSwitch != null)
+        {
+            _currentSwitch.Interact();
+        }
+    }
+   
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out Door door))
+        {
+            if (_currentDoor == door)
+                _currentDoor = null;
+        }
+        if (collision.TryGetComponent(out LampSwitch lampSwitch))
+        {
+           if (_currentSwitch == lampSwitch)
+               _currentSwitch = null;
+        }
+    }
+    private void GameInput_OnDoorInteract(object sender, EventArgs e)
+    {
+        if (_currentDoor != null)
+        {
+            _currentDoor.Interact();
+        }
+    }
+    public void SetVisible(bool visible)
+    {
+        // спрайты
+        foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = visible;
+        }
+
+        // фонарик
+        if (flashlight != null)
+        {
+            flashlight.enabled = visible && _isFlashlightOn;
+        }
+    }
+    
+}

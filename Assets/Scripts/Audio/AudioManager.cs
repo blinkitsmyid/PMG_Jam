@@ -1,22 +1,24 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class MusicManager : MonoBehaviour
+
+public class AudioManager : MonoBehaviour
 {
     public AudioClip MenuMusic;
     public AudioClip LevelMusic;
     public AudioSource musicSource;
     public AudioSource sfxSource;
-    private static MusicManager instance;
+
+    public static AudioManager Instance;
+
+    private bool isMusicOn = true;
+    private bool isSoundOn = true;
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            //musicSource = GetComponent<AudioSource>();
-            //sfxSource =  GetComponent<AudioSource>();
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
@@ -24,16 +26,13 @@ public class MusicManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 0 || scene.buildIndex == 1)
-        {
+        if (scene.buildIndex <= 1)
             PlayMusic(MenuMusic);
-        }
-        else if (scene.buildIndex >= 2 && scene.buildIndex <= 4)
-        {
+        else
             PlayMusic(LevelMusic);
-        }
     }
 
     void PlayMusic(AudioClip clip)
@@ -44,13 +43,19 @@ public class MusicManager : MonoBehaviour
         musicSource.loop = true;
         musicSource.Play();
     }
+
     public void ToggleMusic()
     {
-        musicSource.mute = !musicSource.mute;
+        isMusicOn = !isMusicOn;
+        musicSource.mute = !isMusicOn;
     }
 
     public void ToggleSFX()
     {
-        sfxSource.mute = !sfxSource.mute;
+        isSoundOn = !isSoundOn;
+        sfxSource.mute = !isSoundOn;
     }
+
+    public bool IsMusicOn() => isMusicOn;
+    public bool IsSFXOn() => isSoundOn;
 }

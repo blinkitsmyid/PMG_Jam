@@ -8,14 +8,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
+  - Door
+  - Light
   - 
   - 
-  - 
-  - 
-  - 
+  - CameraConfiner
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3125440717
+    locked: 0
+  - name: Characters
+    uniqueID: 1829643669
+    locked: 0
+  - name: Environment
+    uniqueID: 1140338707
+    locked: 0
+  - name: UI
+    uniqueID: 2404326353
     locked: 0
