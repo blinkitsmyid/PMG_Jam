@@ -6,36 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="01b3aa79-a7af-4d93-9b40-b10c33c9386b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00_Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01_SelectLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01_SelectLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02_Level01.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02_Level01.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03_Level02.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03_Level02.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/04_Level03.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/04_Level03.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/120ff534b845ae2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/120ff534b845ae2.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/4b0c798022a9590.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/4b0c798022a9590.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Video-Project-2-_1_.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Video-Project-2-_1_.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/retro-beeep-1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/retro-beeep-1.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonSounds.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonSounds.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02_Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/02_Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BathRoomDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BathRoomDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +135,7 @@
       <workItem from="1774190300687" duration="11663000" />
       <workItem from="1774371381414" duration="10539000" />
       <workItem from="1774608197144" duration="14000" />
-      <workItem from="1774608243799" duration="31134000" />
+      <workItem from="1774608243799" duration="36426000" />
     </task>
     <servers />
   </component>

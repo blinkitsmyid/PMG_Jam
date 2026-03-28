@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody2D _rb;
     //private KnockBack _knockBack;
-
+    private Sprite _currentSprite;
     private readonly float _minMovingSpeed = 0.1f;
     private bool _isRunning = false;
         
@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
     private bool _hasUsedToilet = false;
     [SerializeField] private float runMultiplier = 2f;
 
+    [SerializeField]
+    private Sprite toiletSprite;
+    private Sprite happySprite;
     private bool _isRunningInput = false;
     
     private void Awake()
@@ -148,8 +151,10 @@ public class PlayerController : MonoBehaviour
     public void DoToiletRoutine(float duration)
     {
         if (_isBusy) return;
-
+        
         StartCoroutine(ToiletRoutine(duration));
+        _currentSprite = toiletSprite;
+        Bumble.Instance.ShowBumble(_currentSprite);
     }
     
     private IEnumerator ToiletRoutine(float duration)

@@ -7,7 +7,7 @@ public class BathroomDoor : Door
     protected override void EnterDoor()
     {
         base.EnterDoor();
-
+        
         player.DoToiletRoutine(toiletTime); // 3 секунды
     }
     public override void Interact()
