@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spider Lover Walk V -Sheet_0: 7738095350401023103
+      Spider Lover Walk V -Sheet_1: -2917632682061579462
+      Spider Lover Walk V -Sheet_2: 4168073555918271512
+      Spider Lover Walk V -Sheet_3: 4633109717480142933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
