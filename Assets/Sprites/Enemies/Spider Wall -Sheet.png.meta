@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spider Wall -Sheet_0: -7461995593034819311
+      Spider Wall -Sheet_1: -6257804690084848900
+      Spider Wall -Sheet_2: 1463668705868909001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
