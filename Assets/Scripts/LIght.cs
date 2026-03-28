@@ -7,21 +7,11 @@ public class Lamp : MonoBehaviour
     [SerializeField] private Light2D lamp;
 
     
-    private void Awake()
-    {
-        if (LampManager.Instance != null)
-        {
-            LampManager.Instance.RegisterLamp(this);
-        }
-        else
-        {
-            Debug.LogWarning("LampManager not found!");
-        }
-    }
+   
     private void Start()
     {
+        LampManager.Instance.RegisterLamp(this);
         UpdateLight();
-        
     }
 
     public void Toggle()
