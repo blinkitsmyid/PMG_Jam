@@ -9,12 +9,19 @@ public class LampManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void RegisterLamp(Lamp lamp)
     {
-        lamps.Add(lamp);
+        Debug.Log("Lamp registered: " + lamp.name);
     }
 
     public bool AreAllLampsOff()

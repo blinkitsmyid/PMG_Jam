@@ -10,18 +10,14 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
 
-    [SerializeField] private float movingSpeed = 10f;
+    [SerializeField] public float movingSpeed = 10f;
     [Space(20)]
-    [SerializeField] private Light2D flashlight;
-    private bool _isFlashlightOn = true;
-    [SerializeField] private Transform flashlightTransform;
     private LampSwitch _currentSwitch;
     private Door _currentDoor;
     private Vector2 _inputVector;
     
     private Rigidbody2D _rb;
     //private KnockBack _knockBack;
-    private Sprite _currentSprite;
     private readonly float _minMovingSpeed = 0.1f;
     private bool _isRunning = false;
         
@@ -53,8 +49,7 @@ public class PlayerController : MonoBehaviour
         _isAlive = true;
         _hasUsedToilet = false;
         GameInput.Instance.EnableMovement();
-        GameInput.Instance.OnFlashlightToggle += GameInput_OnFlashlightToggle;
-        flashlight.enabled = _isFlashlightOn;
+        //GameInput.Instance.OnFlashlightToggle += GameInput_OnFlashlightToggle;
         GameInput.Instance.OnLampInteract += GameInput_OnLampInteract;
         GameInput.Instance.OnDoorInteract += GameInput_OnDoorInteract;
         GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
@@ -67,17 +62,17 @@ public class PlayerController : MonoBehaviour
         
         if (!_isAlive || _isBusy) return;
 
-        _inputVector = GameInput.Instance.GetMovementVector();
-        RotateFlashlight();
+        
+        
     }
   
     private void OnDestroy()
     {
-        if (GameInput.Instance != null)
+        /*if (GameInput.Instance != null)
         {
             GameInput.Instance.OnFlashlightToggle -= GameInput_OnFlashlightToggle;
         }
-        
+        */
         if (GameInput.Instance != null)
         {
             GameInput.Instance.OnLampInteract -= GameInput_OnLampInteract;
@@ -153,8 +148,7 @@ public class PlayerController : MonoBehaviour
         if (_isBusy) return;
         
         StartCoroutine(ToiletRoutine(duration));
-        _currentSprite = toiletSprite;
-        Bumble.Instance.ShowBumble(_currentSprite);
+        
     }
     
     private IEnumerator ToiletRoutine(float duration)
@@ -169,12 +163,13 @@ public class PlayerController : MonoBehaviour
 
         // можно отключить инпут полностью
         GameInput.Instance.DisableMovement();
-
+        Debug.Log($"Bumble: {toiletSprite}");
+        Bumble.Instance.ShowBumble(toiletSprite);
         yield return new WaitForSeconds(duration);
-
+        Bumble.Instance.HideBumble();
         // вернуть всё обратно
         SetVisible(true);
-
+        
         GameInput.Instance.EnableMovement(); // если есть Enable()
         _hasUsedToilet = true;
         _isBusy = false;
@@ -185,22 +180,12 @@ public class PlayerController : MonoBehaviour
         return _hasUsedToilet;
     }
     
-    private void GameInput_OnFlashlightToggle(object sender, EventArgs e)
+    /* private void GameInput_OnFlashlightToggle(object sender, EventArgs e)
     {
         _isFlashlightOn = !_isFlashlightOn;
         flashlight.enabled = _isFlashlightOn;
     }
-    private void RotateFlashlight()
-    {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(GameInput.Instance.GetMousePosition());
-        mouseWorldPos.z = 0f;
-
-        Vector3 direction = mouseWorldPos - flashlightTransform.position;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        flashlightTransform.rotation = Quaternion.Euler(0f, 0f, angle);
-    }
+    */
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -256,10 +241,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // фонарик
-        if (flashlight != null)
-        {
-            flashlight.enabled = visible && _isFlashlightOn;
-        }
+        
     }
     
 }

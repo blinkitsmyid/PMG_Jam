@@ -9,7 +9,14 @@ public class Lamp : MonoBehaviour
     
     private void Awake()
     {
-        LampManager.Instance.RegisterLamp(this);
+        if (LampManager.Instance != null)
+        {
+            LampManager.Instance.RegisterLamp(this);
+        }
+        else
+        {
+            Debug.LogWarning("LampManager not found!");
+        }
     }
     private void Start()
     {
