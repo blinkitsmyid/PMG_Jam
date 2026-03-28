@@ -9,13 +9,13 @@ using UnityEngine.Rendering.Universal;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
-
+    public Vector2 GetInputVector() => _inputVector;
     [SerializeField] public float movingSpeed = 10f;
     [Space(20)]
     private LampSwitch _currentSwitch;
     private Door _currentDoor;
     private Vector2 _inputVector;
-    
+    private bool availableRun = false;
     private Rigidbody2D _rb;
     //private KnockBack _knockBack;
     private readonly float _minMovingSpeed = 0.1f;
@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
         //GameInput.Instance.OnFlashlightToggle += GameInput_OnFlashlightToggle;
         GameInput.Instance.OnLampInteract += GameInput_OnLampInteract;
         GameInput.Instance.OnDoorInteract += GameInput_OnDoorInteract;
-        GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
-        GameInput.Instance.OnRunCanceled += GameInput_OnRunCanceled;
+        //GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
+        //GameInput.Instance.OnRunCanceled += GameInput_OnRunCanceled;
     }
     
     private void Update()
@@ -81,11 +81,11 @@ public class PlayerController : MonoBehaviour
         {
             GameInput.Instance.OnDoorInteract -= GameInput_OnDoorInteract;
         }
-        if (GameInput.Instance != null)
-        {
-            GameInput.Instance.OnRunStarted -= GameInput_OnRunStarted;
-            GameInput.Instance.OnRunCanceled -= GameInput_OnRunCanceled;
-        }
+        //if (GameInput.Instance != null)
+        //{
+        //    GameInput.Instance.OnRunStarted -= GameInput_OnRunStarted;
+        //    GameInput.Instance.OnRunCanceled -= GameInput_OnRunCanceled;
+        //}
     }
 
     private void FixedUpdate()
@@ -111,9 +111,10 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+        Debug.Log(_inputVector);
         float speed = movingSpeed;
 
-        if (_isRunningInput)
+        if (_isRunningInput&&availableRun)
         {
             speed *= runMultiplier;
         }
@@ -166,10 +167,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Bumble: {toiletSprite}");
         Bumble.Instance.ShowBumble(toiletSprite);
         yield return new WaitForSeconds(duration);
-        Bumble.Instance.HideBumble();
+       
+        
         // вернуть всё обратно
         SetVisible(true);
-        
+        Bumble.Instance.HideBumble();
         GameInput.Instance.EnableMovement(); // если есть Enable()
         _hasUsedToilet = true;
         _isBusy = false;

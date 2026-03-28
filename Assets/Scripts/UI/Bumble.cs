@@ -12,7 +12,7 @@ public class Bumble : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        _currentSprite.enabled = false;
+      
         HideBumble();
     }
     public void ShowBumble(Sprite sprite)
@@ -27,6 +27,7 @@ public class Bumble : MonoBehaviour
 
     public void HideBumble()
     {
+        Debug.Log($"HideBumble: {_currentSprite}");
         if (_spriteRenderer == null) return;
         _currentSprite.enabled = false;
         _spriteRenderer.enabled = false;

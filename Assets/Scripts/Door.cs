@@ -7,7 +7,8 @@ public class Door : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
             HintUI.Instance.ShowTemporary(HintMessages.PressRoomIn);
             if (collision.TryGetComponent(out PlayerController p))
             {
@@ -15,7 +16,7 @@ public class Door : MonoBehaviour
                 player = p;
                 isPlayerInside = true;
             }
-        
+        }
     }
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
