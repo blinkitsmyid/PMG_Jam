@@ -109,12 +109,12 @@ TextureImporter:
       name: torchere_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 18
-        height: 24
+        width: 17
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +130,12 @@ TextureImporter:
       name: torchere_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 20
         y: 0
-        width: 19
-        height: 24
+        width: 17
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: torchere_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 9
-        width: 8
-        height: 8
+        x: 40
+        y: 14
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: efd9b3118c3511d4d9bd22c531e1b917
     internalID: 0
     vertices: []
     indices: 
