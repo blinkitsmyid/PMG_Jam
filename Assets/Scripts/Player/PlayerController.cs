@@ -20,17 +20,20 @@ public class PlayerController : MonoBehaviour
     //private KnockBack _knockBack;
     private readonly float _minMovingSpeed = 0.1f;
     private bool _isRunning = false;
-        
+    private int _keysCollected = 0;   
     private bool _isAlive;
     private float _initialMovingSpeed;
     private bool _isBusy = false;
     private Camera _mainCamera;
     private bool _hasUsedToilet = false;
     [SerializeField] private float runMultiplier = 2f;
-
-    [SerializeField]
-    private Sprite toiletSprite;
-    private Sprite happySprite;
+    [SerializeField] private SpriteRenderer playerSprite;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D flashlight;
+    
+    [SerializeField] public Sprite toiletSprite;
+    [SerializeField] public Sprite towelSprite;
+    [SerializeField] public Sprite keySprite;
+    [SerializeField] public Sprite lightSprite;
     private bool _isRunningInput = false;
     private bool _hasKey = false;
 
@@ -159,13 +162,13 @@ public class PlayerController : MonoBehaviour
     }
     public void GiveKey()
     {
-        _hasKey = true;
-        Debug.Log("Player got key");
+        _keysCollected++;
+        Debug.Log($"Keys: {_keysCollected}");
     }
 
-    public bool HasKey()
+    public int GetKeys()
     {
-        return _hasKey;
+        return _keysCollected;
     }
     private IEnumerator ToiletRoutine(float duration)
     {
@@ -179,14 +182,13 @@ public class PlayerController : MonoBehaviour
 
         // можно отключить инпут полностью
         GameInput.Instance.DisableMovement();
-        Debug.Log($"Bumble: {toiletSprite}");
+        
         Bumble.Instance.ShowBumble(toiletSprite);
         yield return new WaitForSeconds(duration);
        
-        
+        Bumble.Instance.HideBumble();
         // вернуть всё обратно
         SetVisible(true);
-        Bumble.Instance.HideBumble();
         GameInput.Instance.EnableMovement(); // если есть Enable()
         _hasUsedToilet = true;
         _isBusy = false;
@@ -251,14 +253,11 @@ public class PlayerController : MonoBehaviour
     }
     public void SetVisible(bool visible)
     {
-        // спрайты
-        foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
-        {
-            sr.enabled = visible;
-        }
+        if (playerSprite != null)
+            playerSprite.enabled = visible;
 
-        // фонарик
-        
+        if (flashlight != null)
+            flashlight.enabled = visible;
     }
     
 }

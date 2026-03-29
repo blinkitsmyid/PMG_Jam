@@ -8,6 +8,7 @@ public class Key : MonoBehaviour
         {
             player.GiveKey();
             Destroy(gameObject);
+            Debug.Log($"Keys: {player.GetKeys()} / {LevelManager.Instance.GetRequiredKeys()}");
         }
     }
 }

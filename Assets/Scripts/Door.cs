@@ -40,11 +40,21 @@ public class Door : MonoBehaviour
 
     protected virtual void EnterDoor()
     {
-        SetPlayerVisible(false);
+        if (player == null) return;
+        
+        GameInput.Instance.DisableMovement();
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        player.SetVisible(false);
+        SoundManager.Instance.PlayOpenedDoor();
     }
     protected virtual void ExitDoor()
     {
-        SetPlayerVisible(true);
+        if (player == null) return;
+
+        
+        GameInput.Instance.EnableMovement();
+        player.SetVisible(true);
+        SoundManager.Instance.PlayClosedDoor();
     }
     protected void SetPlayerVisible(bool visible)
     {

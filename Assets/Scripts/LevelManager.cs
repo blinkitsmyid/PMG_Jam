@@ -15,13 +15,20 @@ public class LevelManager : MonoBehaviour
     {
         return level;
     }
+    public int GetRequiredKeys()
+    {
+        if (level == 3) return 3;
 
+        if (level >= 2) return 1;
+
+        return 0;
+    }
     public bool NeedKey()
     {
-        return level >= 2;
+        return GetRequiredKeys() > 0;
     }
     public bool CanRun()
     {
-        return level >= 4;
+        return level >= 2;
     }
 }

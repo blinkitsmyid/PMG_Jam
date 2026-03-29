@@ -69,11 +69,11 @@ public class SoundManager : MonoBehaviour
     {
         
     }
-    public void OpenedDoor()
+    public void PlayOpenedDoor()
     {
         
     }
-    public void ClosedDoor()
+    public void PlayClosedDoor()
     {
         
     }
@@ -81,4 +81,5 @@ public class SoundManager : MonoBehaviour
     {
         
     }
+    
 }
