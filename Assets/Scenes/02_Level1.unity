@@ -4241,9 +4241,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde1b149a5ae3ae48aa55ec7369efae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstepAudio: {fileID: 0}
+  stepInterval: 0.5
   movingSpeed: 0.3
   runMultiplier: 2
+  playerSprite: {fileID: 0}
+  flashlight: {fileID: 0}
   toiletSprite: {fileID: -8014315233242688854, guid: 86392177d68b20a408a92ff4555b72d6, type: 3}
+  towelSprite: {fileID: 0}
+  keySprite: {fileID: 0}
+  lightSprite: {fileID: 0}
 --- !u!50 &605039144
 Rigidbody2D:
   serializedVersion: 4
@@ -5570,7 +5577,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -13075,6 +13082,7 @@ GameObject:
   - component: {fileID: 1549792524}
   - component: {fileID: 1549792527}
   - component: {fileID: 1549792528}
+  - component: {fileID: 1549792529}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13150,6 +13158,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 864299378}
   defaultDuration: 2
+--- !u!114 &1549792529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549792523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7663589796b41284a8c018c0cc8478f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
 --- !u!1001 &1580118987
 PrefabInstance:
   m_ObjectHideFlags: 0

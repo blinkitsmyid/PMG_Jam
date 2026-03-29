@@ -3,7 +3,7 @@ using UnityEngine;
 public class BathroomDoor : Door
 {
     PlayerController playerController;
-    private bool isInsideDoor =  false;
+    private bool isInsideDoor = false;
     [SerializeField] private float toiletTime = 3f;
     protected override void EnterDoor()
     {
@@ -22,7 +22,7 @@ public class BathroomDoor : Door
         base.EnterDoor();
         player.DoToiletRoutine(toiletTime);
     }
-  
+
     public override void Interact()
     {
         if (!isPlayerInside || player == null) return;
