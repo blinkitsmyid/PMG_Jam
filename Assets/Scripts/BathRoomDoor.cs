@@ -6,10 +6,18 @@ public class BathroomDoor : Door
     [SerializeField] private float toiletTime = 3f;
     protected override void EnterDoor()
     {
+        // 🔑 проверка ключа
+        if (LevelManager.Instance.NeedKey() && !player.HasKey())
+        {
+            Debug.Log("Нужен ключ!");
+            HintUI.Instance.ShowTemporary(HintMessages.NeedKey);
+            return;
+        }
+
         base.EnterDoor();
-        
-        player.DoToiletRoutine(toiletTime); // 3 секунды
+        player.DoToiletRoutine(toiletTime);
     }
+  
     public override void Interact()
     {
         if (!isPlayerInside || player == null) return;

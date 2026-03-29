@@ -8,4 +8,6 @@ public static class HintMessages
     public const string TurnOffLights = "Выключи весь свет!";
     public const string GoToToilet = "Сначала сходи в туалет!";
     public const string DoorLocked = "Дверь закрыта";
+    public const string NeedKey = "Нужен Ключ";
+
 }

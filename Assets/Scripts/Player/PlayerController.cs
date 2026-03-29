@@ -32,7 +32,9 @@ public class PlayerController : MonoBehaviour
     private Sprite toiletSprite;
     private Sprite happySprite;
     private bool _isRunningInput = false;
-    
+    private bool _hasKey = false;
+
+   
     private void Awake()
     {
         Instance = this;
@@ -52,13 +54,14 @@ public class PlayerController : MonoBehaviour
         //GameInput.Instance.OnFlashlightToggle += GameInput_OnFlashlightToggle;
         GameInput.Instance.OnLampInteract += GameInput_OnLampInteract;
         GameInput.Instance.OnDoorInteract += GameInput_OnDoorInteract;
-        //GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
-        //GameInput.Instance.OnRunCanceled += GameInput_OnRunCanceled;
+        GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
+        GameInput.Instance.OnRunCanceled += GameInput_OnRunCanceled;
     }
     
     private void Update()
     {
         _inputVector = GameInput.Instance.GetMovementVector();
+        availableRun = LevelManager.Instance.CanRun();
         
         if (!_isAlive || _isBusy) return;
 
@@ -81,11 +84,11 @@ public class PlayerController : MonoBehaviour
         {
             GameInput.Instance.OnDoorInteract -= GameInput_OnDoorInteract;
         }
-        //if (GameInput.Instance != null)
-        //{
-        //    GameInput.Instance.OnRunStarted -= GameInput_OnRunStarted;
-        //    GameInput.Instance.OnRunCanceled -= GameInput_OnRunCanceled;
-        //}
+        if (GameInput.Instance != null)
+        {
+            GameInput.Instance.OnRunStarted -= GameInput_OnRunStarted;
+            GameInput.Instance.OnRunCanceled -= GameInput_OnRunCanceled;
+        }
     }
 
     private void FixedUpdate()
@@ -108,13 +111,16 @@ public class PlayerController : MonoBehaviour
     {
         return _isRunning;
     }
-
+    public bool IsActuallyRunning()
+    {
+        return _isRunningInput && LevelManager.Instance.CanRun();
+    }
     private void HandleMovement()
     {
         Debug.Log(_inputVector);
         float speed = movingSpeed;
 
-        if (_isRunningInput&&availableRun)
+        if (_isRunningInput && LevelManager.Instance.CanRun())
         {
             speed *= runMultiplier;
         }
@@ -151,7 +157,16 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(ToiletRoutine(duration));
         
     }
-    
+    public void GiveKey()
+    {
+        _hasKey = true;
+        Debug.Log("Player got key");
+    }
+
+    public bool HasKey()
+    {
+        return _hasKey;
+    }
     private IEnumerator ToiletRoutine(float duration)
     {
         _isBusy = true;

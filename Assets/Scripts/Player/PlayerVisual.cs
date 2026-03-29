@@ -26,6 +26,6 @@ public class PlayerVisual : MonoBehaviour
         bool isMoving = input.magnitude > 0.1f;
         Debug.Log(isMoving);
         _animator.SetBool(IsMoving, isMoving);
-        _animator.SetBool(IsRunning, PlayerController.Instance.IsRunning());
+        _animator.SetBool(IsRunning, PlayerController.Instance.IsActuallyRunning());
     }
 }
