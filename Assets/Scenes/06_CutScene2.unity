@@ -313,14 +313,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneImages:
-  - {fileID: -3063286458315728477, guid: 93bf273fa964c1c4098da408cfcc8b4d, type: 3}
-  - {fileID: 5113207489814486384, guid: 91f224ebad94a3f4b8358eb4c932daca, type: 3}
-  - {fileID: -1438313809801858831, guid: bc0ca111eb5121c439a7783bb2957ffa, type: 3}
-  - {fileID: 5477355631300771710, guid: 0b9ef6a5b5034df4ba0d4be2afd22fce, type: 3}
-  - {fileID: -76261486941338622, guid: 561fb203f9b96b245915aeafe892d1d2, type: 3}
-  - {fileID: 7669382555982120512, guid: 0b2bc6509462c414c827da97810b3149, type: 3}
+  - {fileID: -7798505462486224395, guid: 15da94745dd5efa40a73380ee8bdd019, type: 3}
+  - {fileID: 1408124954856922618, guid: 7c3d10ba6baef33488ea6165a83da2e5, type: 3}
+  - {fileID: 8247258441175292874, guid: 5e7c0831d94f9c44fb6a7f033b7f5398, type: 3}
+  - {fileID: 2853936142770585891, guid: 26ab103ad96c44b44af873380fbb66af, type: 3}
+  - {fileID: 2043294511631199466, guid: ec1983ac73baa5d419969e67614070b8, type: 3}
+  - {fileID: 7824847478817064336, guid: cad09bc766733294a9c858e72c3cb02e, type: 3}
   displayImage: {fileID: 994929007}
-  nextSceneName: 02_Level1
+  nextSceneName: 00_Menu
 --- !u!1 &994929006
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3063286458315728477, guid: 93bf273fa964c1c4098da408cfcc8b4d, type: 3}
+  m_Sprite: {fileID: -7798505462486224395, guid: 15da94745dd5efa40a73380ee8bdd019, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
