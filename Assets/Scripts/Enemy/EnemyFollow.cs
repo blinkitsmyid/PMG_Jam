@@ -146,6 +146,7 @@ public class EnemyFollow : MonoBehaviour
         else
         {
             dir = 2; // Down
+            _spriteRenderer.flipY = direction.y > 0;
         }
 
         _animator.SetInteger("Direction", dir);

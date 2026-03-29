@@ -60,5 +60,25 @@ public class SoundManager : MonoBehaviour
         if (damageSound != null && sfxSource != null)
             sfxSource.PlayOneShot(damageSound);
     }
-    
+
+    public void PlayWalkSound()
+    {
+        
+    }
+    public void PlayRunSound()
+    {
+        
+    }
+    public void OpenedDoor()
+    {
+        
+    }
+    public void ClosedDoor()
+    {
+        
+    }
+    public void Enepy()
+    {
+        
+    }
 }
