@@ -21,7 +21,7 @@ public class BedroomDoor : Door
             Bumble.Instance.HideBumble();
             return;
         }
-        
+
         GameInput.Instance.DisableMovement();
         PanelManager.Instance.Win();
         base.EnterDoor();

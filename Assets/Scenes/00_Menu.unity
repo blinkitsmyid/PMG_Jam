@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc40274642bbbb3409557db9de130632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuMusic: {fileID: 8300000, guid: 1a1840cb896e9aa4aaac58f8369ffffa, type: 3}
-  LevelMusic: {fileID: 8300000, guid: 92151035a6673ba4db8034352ca94515, type: 3}
+  MenuMusic: {fileID: 8300000, guid: 0628b93f8fb831e4190123e913bb586b, type: 3}
+  LevelMusic: {fileID: 8300000, guid: 568a4ca47d98d344abde6316b0ddb4cf, type: 3}
   musicSource: {fileID: 112770239}
   sfxSource: {fileID: 639246818}
 --- !u!4 &112770237
@@ -354,7 +354,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.333
   m_Pitch: 1
   Loop: 0
   Mute: 0

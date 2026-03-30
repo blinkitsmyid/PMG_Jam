@@ -41,7 +41,7 @@ public class Door : MonoBehaviour
     protected virtual void EnterDoor()
     {
         if (player == null) return;
-        
+
         GameInput.Instance.DisableMovement();
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         player.SetVisible(false);
@@ -51,7 +51,7 @@ public class Door : MonoBehaviour
     {
         if (player == null) return;
 
-        
+
         GameInput.Instance.EnableMovement();
         player.SetVisible(true);
         SoundManager.Instance.PlayClosedDoor();
