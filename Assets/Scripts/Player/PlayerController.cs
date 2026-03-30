@@ -8,6 +8,9 @@ using UnityEngine.Rendering.Universal;
 [SelectionBase]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private AudioSource footstepAudio;
+    [SerializeField] private float stepInterval = 0.5f; // интервал между шагами
+    private float stepTimer = 0f;
     public static PlayerController Instance { get; private set; }
     public Vector2 GetInputVector() => _inputVector;
     [SerializeField] public float movingSpeed = 10f;
@@ -120,7 +123,6 @@ public class PlayerController : MonoBehaviour
     }
     private void HandleMovement()
     {
-        Debug.Log(_inputVector);
         float speed = movingSpeed;
 
         if (_isRunningInput && LevelManager.Instance.CanRun())
@@ -130,6 +132,7 @@ public class PlayerController : MonoBehaviour
 
         _rb.MovePosition(_rb.position + _inputVector * (speed * Time.fixedDeltaTime));
 
+        // Определяем движение
         if (Mathf.Abs(_inputVector.x) > _minMovingSpeed || Mathf.Abs(_inputVector.y) > _minMovingSpeed)
         {
             _isRunning = true;
@@ -137,6 +140,21 @@ public class PlayerController : MonoBehaviour
         else
         {
             _isRunning = false;
+        }
+
+        // Звуки шагов
+        if (_isRunning)
+        {
+            stepTimer -= Time.fixedDeltaTime;
+            if (stepTimer <= 0f)
+            {
+                footstepAudio.Play();
+                stepTimer = stepInterval;
+            }
+        }
+        else
+        {
+            stepTimer = 0f;
         }
     }
     private void GameInput_OnRunStarted(object sender, EventArgs e)

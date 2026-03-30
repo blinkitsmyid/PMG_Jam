@@ -12,6 +12,12 @@ public class SoundManager : MonoBehaviour
     public AudioClip coinSound;
     public AudioClip damageSound;
     public AudioClip healSound;
+    public AudioClip keySound;
+    public AudioClip dooropenSound;
+    public AudioClip doorcloseSound;
+    public AudioClip walkSound;
+    public AudioClip runSound;
+    public AudioClip spiderwalkSound;
     void Awake()
     {
         if (Instance == null)
@@ -54,7 +60,11 @@ public class SoundManager : MonoBehaviour
         if (loseSound != null && sfxSource != null)
             sfxSource.PlayOneShot(loseSound);
     }
-   
+    public void PlayЛунЫщгтв()
+    {
+        if (clickSound != null && sfxSource != null)
+            sfxSource.PlayOneShot(keySound);
+    }
     public void PlayDamageSound()
     {
         if (damageSound != null && sfxSource != null)
