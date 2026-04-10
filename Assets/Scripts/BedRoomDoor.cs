@@ -8,20 +8,18 @@ public class BedroomDoor : Door
         if (!player.HasUsedToilet())
         {
             Debug.Log("Сначала сходи в туалет!");
-            Bumble.Instance.ShowBumble(playerController.towelSprite);
+            Bumble.Instance.ShowBumble(PlayerController.Instance.towelSprite);
             HintUI.Instance.ShowTemporary(HintMessages.GoToToilet);
-            Bumble.Instance.HideBumble();
             return;
         }
         if (!LampManager.Instance.AreAllLampsOff())
         {
             Debug.Log("Нельзя войти — включён свет!");
-            Bumble.Instance.ShowBumble(playerController.lightSprite);
+            Bumble.Instance.ShowBumble(PlayerController.Instance.lightSprite);
             HintUI.Instance.ShowTemporary(HintMessages.TurnOffLights);
-            Bumble.Instance.HideBumble();
             return;
         }
-
+        SoundManager.Instance.PlayOpenedDoor();
         GameInput.Instance.DisableMovement();
         PanelManager.Instance.Win();
         base.EnterDoor();

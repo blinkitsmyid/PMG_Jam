@@ -4245,12 +4245,12 @@ MonoBehaviour:
   stepInterval: 0.5
   movingSpeed: 0.3
   runMultiplier: 2
-  playerSprite: {fileID: 0}
-  flashlight: {fileID: 0}
+  playerSprite: {fileID: 605039148}
+  flashlight: {fileID: 332500505}
   toiletSprite: {fileID: -8014315233242688854, guid: 86392177d68b20a408a92ff4555b72d6, type: 3}
-  towelSprite: {fileID: 0}
-  keySprite: {fileID: 0}
-  lightSprite: {fileID: 0}
+  towelSprite: {fileID: 1762854388791719718, guid: 86392177d68b20a408a92ff4555b72d6, type: 3}
+  keySprite: {fileID: -3401168524788556149, guid: 86392177d68b20a408a92ff4555b72d6, type: 3}
+  lightSprite: {fileID: 4509215315611281716, guid: 86392177d68b20a408a92ff4555b72d6, type: 3}
 --- !u!50 &605039144
 Rigidbody2D:
   serializedVersion: 4
@@ -4638,6 +4638,12 @@ MonoBehaviour:
   coinSound: {fileID: 8300000, guid: d31e864c2f2a10e4f8ecc06d9f761a07, type: 3}
   damageSound: {fileID: 8300000, guid: 40f0e528f40bebb48a907d80f03e6cee, type: 3}
   healSound: {fileID: 8300000, guid: c6e0a842662b6bd4a9b62ced55d8bc6f, type: 3}
+  keySound: {fileID: 0}
+  dooropenSound: {fileID: 0}
+  doorcloseSound: {fileID: 0}
+  walkSound: {fileID: 0}
+  runSound: {fileID: 0}
+  spiderwalkSound: {fileID: 0}
 --- !u!4 &619305619
 Transform:
   m_ObjectHideFlags: 0

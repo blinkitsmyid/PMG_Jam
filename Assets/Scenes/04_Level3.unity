@@ -24510,13 +24510,14 @@ GameObject:
   - component: {fileID: 864299377}
   - component: {fileID: 864299379}
   - component: {fileID: 864299378}
+  - component: {fileID: 864299380}
   m_Layer: 5
   m_Name: HintText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &864299377
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24559,7 +24560,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d268cd3299e3544ab5d5233ebc86997, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 6914543786478735469, guid: 9d268cd3299e3544ab5d5233ebc86997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24624,7 +24625,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -475.2872, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &864299379
@@ -24635,6 +24636,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864299376}
   m_CullTransparentMesh: 1
+--- !u!114 &864299380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864299376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453d186bb6499534ea65e31d48564a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintText: {fileID: 0}
+  defaultDuration: 2
 --- !u!1001 &864627918
 PrefabInstance:
   m_ObjectHideFlags: 0

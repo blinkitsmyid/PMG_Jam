@@ -6,13 +6,56 @@
   <component name="ChangeListManager">
     <list default="true" id="01b3aa79-a7af-4d93-9b40-b10c33c9386b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/run.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/run/Running loop.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/run/Running loop.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/steps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/steps/Footstep on wood 4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/steps/Footstep on wood 4.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/steps/footstep on concrete 4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/Character/steps/footstep on concrete 4.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/click.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/click/button-click-multiple-clear.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/click/button-click-multiple-clear.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/door closed.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/door closed/caravan_front_door_open.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/door closed/caravan_front_door_open.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/door open.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/door open/8f9c23b5a2ec55e.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/door open/8f9c23b5a2ec55e.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/game over.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/game over/c87d07d3abd33b5.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/game over/c87d07d3abd33b5.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/key.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/key/0ad40b709c395ea.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/key/0ad40b709c395ea.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/spider walk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/spider walk/creature-mix-spiders.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/spider walk/creature-mix-spiders.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/swarm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/swarm/7ef28ab64216185.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/swarm/7ef28ab64216185.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/switch.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/switch/switch-lamp-switch-clicking_fk4jxsnu.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/switch/switch-lamp-switch-clicking_fk4jxsnu.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/win.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/win/01266b6f83a408d.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/win/01266b6f83a408d.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00_Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/02_Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/02_Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03_Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/03_Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/04_Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/04_Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/UIButtonSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/UIButtonSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BathRoomDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BathRoomDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BedRoomDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BedRoomDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightSwitch.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Bumble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Bumble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Patrol Walk V -Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Patrol Walk V -Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Watcher Walk H -Sheet.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Watcher Walk H -Sheet.png.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +177,8 @@
       <workItem from="1774371381414" duration="10539000" />
       <workItem from="1774608197144" duration="14000" />
       <workItem from="1774608243799" duration="36426000" />
+      <workItem from="1775633449789" duration="4546000" />
+      <workItem from="1775821574468" duration="8505000" />
     </task>
     <servers />
   </component>

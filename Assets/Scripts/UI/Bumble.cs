@@ -5,9 +5,11 @@ using TMPro;
 
 public class Bumble : MonoBehaviour
 {
+    PlayerController playerController;
     [SerializeField] SpriteRenderer _spriteRenderer;
     [SerializeField] SpriteRenderer _currentSprite;
     [SerializeField] private float defaultDuration = 3f;
+    
     public static Bumble Instance;
     void Awake()
     {
@@ -15,14 +17,22 @@ public class Bumble : MonoBehaviour
 
         HideBumble();
     }
-    public void ShowBumble(Sprite sprite)
+    public void ShowBumble(Sprite sprite, float duration = 3f)
     {
         if (_currentSprite == null || _spriteRenderer == null) return;
 
         _currentSprite.sprite = sprite;
-        Debug.Log($"ShowBumble: {_currentSprite}");
         _currentSprite.enabled = true;
         _spriteRenderer.enabled = true;
+
+        StopAllCoroutines();
+        StartCoroutine(HideAfterTime(duration));
+    }
+
+    private IEnumerator HideAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        HideBumble();
     }
 
     public void HideBumble()

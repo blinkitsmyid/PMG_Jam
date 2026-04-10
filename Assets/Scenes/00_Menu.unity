@@ -976,9 +976,15 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: 1ec87110bda0f6040a58562997b07c36, type: 3}
   winSound: {fileID: 8300000, guid: 9ec0420523043be49a0f1992ca6db9ce, type: 3}
   loseSound: {fileID: 8300000, guid: 52a2bc185baef574b9fffde86573b94c, type: 3}
-  coinSound: {fileID: 8300000, guid: d31e864c2f2a10e4f8ecc06d9f761a07, type: 3}
   damageSound: {fileID: 8300000, guid: 40f0e528f40bebb48a907d80f03e6cee, type: 3}
-  healSound: {fileID: 8300000, guid: c6e0a842662b6bd4a9b62ced55d8bc6f, type: 3}
+  keySound: {fileID: 8300000, guid: edec530cd3a13694b89ff64f54c97552, type: 3}
+  dooropenSound: {fileID: 8300000, guid: b6c52db2906f9e646bba0c7a098cbd6a, type: 3}
+  doorcloseSound: {fileID: 8300000, guid: c3d952f6358ed30458419c5b5c9f9ce1, type: 3}
+  lampswitchSound: {fileID: 8300000, guid: 9bc82f388d94c944ca0a7e80584391d2, type: 3}
+  whistleSound: {fileID: 0}
+  walkSound: {fileID: 0}
+  runSound: {fileID: 0}
+  spiderwalkSound: {fileID: 0}
 --- !u!4 &639246817
 Transform:
   m_ObjectHideFlags: 0

@@ -9,12 +9,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip clickSound;
     public AudioClip winSound;
     public AudioClip loseSound;
-    public AudioClip coinSound;
-    public AudioClip damageSound;
-    public AudioClip healSound;
     public AudioClip keySound;
     public AudioClip dooropenSound;
     public AudioClip doorcloseSound;
+    public AudioClip lampswitchSound;
+    public AudioClip whistleSound;
     public AudioClip walkSound;
     public AudioClip runSound;
     public AudioClip spiderwalkSound;
@@ -60,15 +59,10 @@ public class SoundManager : MonoBehaviour
         if (loseSound != null && sfxSource != null)
             sfxSource.PlayOneShot(loseSound);
     }
-    public void PlayЛунЫщгтв()
+    public void PlayKeySound()
     {
-        if (clickSound != null && sfxSource != null)
+        if (keySound != null && sfxSource != null)
             sfxSource.PlayOneShot(keySound);
-    }
-    public void PlayDamageSound()
-    {
-        if (damageSound != null && sfxSource != null)
-            sfxSource.PlayOneShot(damageSound);
     }
 
     public void PlayWalkSound()
@@ -81,13 +75,25 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayOpenedDoor()
     {
-        
+        if (dooropenSound != null && sfxSource != null)
+            sfxSource.PlayOneShot(dooropenSound);
     }
     public void PlayClosedDoor()
     {
-        
+        if (doorcloseSound != null && sfxSource != null)
+            sfxSource.PlayOneShot(doorcloseSound);
     }
-    public void Enepy()
+    public void PlayLampSwitch()
+    {
+        if (lampswitchSound != null && sfxSource != null)
+            sfxSource.PlayOneShot(lampswitchSound);
+    }
+    public void PlayWhistleSound()
+    {
+        if (whistleSound != null && sfxSource != null)
+            sfxSource.PlayOneShot(whistleSound);
+    }
+    public void Enemy()
     {
         
     }

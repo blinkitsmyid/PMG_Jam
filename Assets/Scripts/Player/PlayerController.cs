@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
         // скрыть игрока
         SetVisible(false);
 
-        // можно отключить инпут полностью
+     
         GameInput.Instance.DisableMovement();
 
         Bumble.Instance.ShowBumble(toiletSprite);

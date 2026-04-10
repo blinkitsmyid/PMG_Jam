@@ -13,12 +13,13 @@ public class BathroomDoor : Door
         if (player.GetKeys() < requiredKeys)
         {
             Debug.Log("Недостаточно ключей!");
-            Bumble.Instance.ShowBumble(playerController.keySprite);
+            Bumble.Instance.ShowBumble(PlayerController.Instance.keySprite);
+            AudioManager.Instance.PlayDoorClose();
             HintUI.Instance.ShowTemporary(HintMessages.NeedKey);
-            Bumble.Instance.HideBumble();
+            
             return;
         }
-
+        AudioManager.Instance.PlayDoorOpen();
         base.EnterDoor();
         player.DoToiletRoutine(toiletTime);
     }
@@ -37,7 +38,7 @@ public class BathroomDoor : Door
     protected override void ExitDoor()
     {
         base.ExitDoor();
-
+        AudioManager.Instance.PlayDoorOpen();
         Debug.Log("Player left bathroom");
     }
 }
