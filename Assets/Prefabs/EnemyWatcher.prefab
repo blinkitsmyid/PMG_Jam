@@ -414,7 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4685706619666141717}
   - component: {fileID: 665536260237156369}
-  - component: {fileID: 3362234411831149720}
+  - component: {fileID: 5625280411780065416}
   m_Layer: 0
   m_Name: EnemyWatcher
   m_TagString: Untagged
@@ -490,8 +490,8 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!60 &3362234411831149720
-PolygonCollider2D:
+--- !u!61 &5625280411780065416
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -524,7 +524,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01464206, y: 0.8049544}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -534,11 +534,5 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.00000011920929, y: 1.416446}
-      - {x: -0.5654581, y: 1.2575886}
-      - {x: -0.028667629, y: 0.04701066}
-      - {x: 0.0016762018, y: 0.01616311}
-      - {x: 0.5654583, y: 1.3000045}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 0.7207135, y: 1.0769751}
+  m_EdgeRadius: 0

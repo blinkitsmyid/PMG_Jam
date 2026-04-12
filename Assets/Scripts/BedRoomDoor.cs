@@ -15,6 +15,7 @@ public class BedroomDoor : Door
         }
         if (!LampManager.Instance.AreAllLampsOff())
         {
+            AudioManager.Instance.PlayDoorClose();
             Debug.Log("Нельзя войти — включён свет!");
             Bumble.Instance.ShowBumble(PlayerController.Instance.lightSprite);
             HintUI.Instance.ShowTemporary(HintMessages.TurnOffLights);
