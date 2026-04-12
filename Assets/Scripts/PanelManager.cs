@@ -45,7 +45,7 @@ public class PanelManager : MonoBehaviour
     {
         AudioManager.Instance.musicSource.Stop();
         losePanel.SetActive(true);
-        SoundManager.Instance.PlayLoseSound();
+        AudioManager.Instance.PlayLose();
         Time.timeScale = 0f;
     }
 
@@ -54,7 +54,7 @@ public class PanelManager : MonoBehaviour
     {
         AudioManager.Instance.musicSource.Stop();
         winPanel.SetActive(true);
-        SoundManager.Instance.PlayWinSound();
+        AudioManager.Instance.PlayWin();
         Time.timeScale = 0f;
     }
     

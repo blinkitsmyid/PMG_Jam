@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     //private KnockBack _knockBack;
     private readonly float _minMovingSpeed = 0.1f;
-    private bool _isRunning = false;
+    private bool _isMoving = false;
     private int _keysCollected = 0;
     private bool _isAlive;
     private float _initialMovingSpeed;
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public Sprite towelSprite;
     [SerializeField] public Sprite keySprite;
     [SerializeField] public Sprite lightSprite;
+    [SerializeField] public Sprite bedSprite;
     private bool _isRunningInput = false;
     private bool _hasKey = false;
 
@@ -45,7 +46,6 @@ public class PlayerController : MonoBehaviour
     {
         Instance = this;
         _rb = GetComponent<Rigidbody2D>();
-        //_knockBack = GetComponent<KnockBack>();
 
         _mainCamera = Camera.main;
 
@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        
         _isAlive = true;
         _hasUsedToilet = false;
         GameInput.Instance.EnableMovement();
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
         GameInput.Instance.OnDoorInteract += GameInput_OnDoorInteract;
         GameInput.Instance.OnRunStarted += GameInput_OnRunStarted;
         GameInput.Instance.OnRunCanceled += GameInput_OnRunCanceled;
+        Bumble.Instance.ShowBumble(towelSprite);
     }
 
     private void Update()
@@ -71,17 +73,11 @@ public class PlayerController : MonoBehaviour
 
         if (!_isAlive || _isBusy) return;
 
-
-
     }
 
     private void OnDestroy()
     {
-        /*if (GameInput.Instance != null)
-        {
-            GameInput.Instance.OnFlashlightToggle -= GameInput_OnFlashlightToggle;
-        }
-        */
+    
         if (GameInput.Instance != null)
         {
             GameInput.Instance.OnLampInteract -= GameInput_OnLampInteract;
@@ -113,9 +109,9 @@ public class PlayerController : MonoBehaviour
         PanelManager.Instance.Lose();
     }
 
-    public bool IsRunning()
+    public bool IsMoving()
     {
-        return _isRunning;
+        return _isMoving;
     }
     public bool IsActuallyRunning()
     {
@@ -131,30 +127,26 @@ public class PlayerController : MonoBehaviour
         }
 
         _rb.MovePosition(_rb.position + _inputVector * (speed * Time.fixedDeltaTime));
-
-        // Определяем движение
+        
         if (Mathf.Abs(_inputVector.x) > _minMovingSpeed || Mathf.Abs(_inputVector.y) > _minMovingSpeed)
         {
-            _isRunning = true;
+            _isMoving = true;
         }
         else
         {
-            _isRunning = false;
+            _isMoving = false;
         }
 
-        // Звуки шагов
-        if (_isRunning)
+        if (_inputVector.magnitude > 0.1f)
         {
-            stepTimer -= Time.fixedDeltaTime;
-            if (stepTimer <= 0f)
-            {
-                footstepAudio.Play();
-                stepTimer = stepInterval;
-            }
+            if (IsActuallyRunning())
+                AudioManager.Instance.PlayRun();
+            else
+                AudioManager.Instance.PlayWalk();
         }
         else
         {
-            stepTimer = 0f;
+            AudioManager.Instance.StopSteps();
         }
     }
     private void GameInput_OnRunStarted(object sender, EventArgs e)
@@ -207,23 +199,17 @@ public class PlayerController : MonoBehaviour
         Bumble.Instance.HideBumble();
         // вернуть всё обратно
         SetVisible(true);
-        GameInput.Instance.EnableMovement(); // если есть Enable()
+        GameInput.Instance.EnableMovement(); 
         _hasUsedToilet = true;
         _isBusy = false;
+        Bumble.Instance.ShowBumble(bedSprite);
     }
 
     public bool HasUsedToilet()
     {
         return _hasUsedToilet;
     }
-
-    /* private void GameInput_OnFlashlightToggle(object sender, EventArgs e)
-    {
-        _isFlashlightOn = !_isFlashlightOn;
-        flashlight.enabled = _isFlashlightOn;
-    }
-    */
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Light"))

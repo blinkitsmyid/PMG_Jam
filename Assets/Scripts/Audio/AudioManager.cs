@@ -19,10 +19,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip doorCloseSound;
     public AudioClip lampSwitchSound;
     public AudioClip whistleSound;
-
+    public AudioClip walkSound;
+    public AudioClip runSound;
     public AudioSource musicSource;
     public AudioSource sfxSource;
-
+    public AudioSource stepSource;
     private bool isMusicOn = true;
     private bool isSoundOn = true;
 
@@ -41,10 +42,11 @@ public class AudioManager : MonoBehaviour
         // создаём AudioSource автоматически
         musicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
-
+        stepSource =  gameObject.AddComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
+    
+    
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -102,7 +104,32 @@ public class AudioManager : MonoBehaviour
         isSoundOn = !isSoundOn;
         sfxSource.mute = !isSoundOn;
     }
+    public void PlayWalk()
+    {
+        if (!isSoundOn || walkSound == null) return;
 
+        if (stepSource.clip == walkSound && stepSource.isPlaying) return;
+
+        stepSource.clip = walkSound;
+        stepSource.pitch = Random.Range(0.9f, 1.1f); // 🔥 ВОТ ЭТО ГЛАВНОЕ
+        stepSource.Play();
+    }
+
+    public void PlayRun()
+    {
+        if (!isSoundOn || runSound == null) return;
+
+        if (stepSource.clip == runSound && stepSource.isPlaying) return;
+
+        stepSource.clip = runSound;
+        stepSource.pitch = Random.Range(1.1f, 1.3f); // чуть быстрее и выше
+        stepSource.Play();
+    }
+
+    public void StopSteps()
+    {
+        stepSource.Stop();
+    }
     public bool IsMusicOn() => isMusicOn;
     public bool IsSFXOn() => isSoundOn;
 }

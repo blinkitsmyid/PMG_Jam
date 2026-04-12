@@ -7,6 +7,7 @@ public class BedroomDoor : Door
     {
         if (!player.HasUsedToilet())
         {
+            AudioManager.Instance.PlayDoorClose();
             Debug.Log("Сначала сходи в туалет!");
             Bumble.Instance.ShowBumble(PlayerController.Instance.towelSprite);
             HintUI.Instance.ShowTemporary(HintMessages.GoToToilet);
