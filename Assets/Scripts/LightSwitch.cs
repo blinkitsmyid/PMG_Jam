@@ -6,6 +6,7 @@ public class LampSwitch : MonoBehaviour
 
     public void Interact()
     {
+        AudioManager.Instance.PlayLamp();
         lamp.Toggle();
     }
 }

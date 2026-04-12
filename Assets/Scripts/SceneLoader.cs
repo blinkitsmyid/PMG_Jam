@@ -5,7 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadLevelSelect()
     {
-        SoundManager.Instance.PlayClick();
+        AudioManager.Instance.PlayClick();
         SceneManager.LoadScene("01_SelectLevel");
     }
     
@@ -18,7 +18,7 @@ public class SceneLoader : MonoBehaviour
     
     public void LoadMenu()
     {
-        SoundManager.Instance.PlayClick();
+        AudioManager.Instance.PlayClick();
         SceneManager.LoadScene("00_Menu");
     }
     

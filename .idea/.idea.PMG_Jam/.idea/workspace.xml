@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b3aa79-a7af-4d93-9b40-b10c33c9386b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneForTests.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneForTests.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02_Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/02_Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/01266b6f83a408d.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Sounds/winSound.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/01266b6f83a408d.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Sounds/winSound.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/c87d07d3abd33b5.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Sounds/loseSound.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/c87d07d3abd33b5.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Sounds/loseSound.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyPatrol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyPatrol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyPatrolHorizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyPatrolHorizontal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyPatrolVertical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyPatrolVertical.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyWatcher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyWatcher.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00_Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BedRoomDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BedRoomDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PanelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PanelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Bumble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Bumble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Patrol Walk V -Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Patrol Walk V -Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Watcher Walk H -Sheet.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/Spider Watcher Walk H -Sheet.png.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +143,8 @@
       <workItem from="1774371381414" duration="10539000" />
       <workItem from="1774608197144" duration="14000" />
       <workItem from="1774608243799" duration="36426000" />
+      <workItem from="1775633449789" duration="4546000" />
+      <workItem from="1775821574468" duration="15394000" />
     </task>
     <servers />
   </component>

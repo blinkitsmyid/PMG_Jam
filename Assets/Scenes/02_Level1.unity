@@ -4638,6 +4638,12 @@ MonoBehaviour:
   coinSound: {fileID: 8300000, guid: d31e864c2f2a10e4f8ecc06d9f761a07, type: 3}
   damageSound: {fileID: 8300000, guid: 40f0e528f40bebb48a907d80f03e6cee, type: 3}
   healSound: {fileID: 8300000, guid: c6e0a842662b6bd4a9b62ced55d8bc6f, type: 3}
+  keySound: {fileID: 0}
+  dooropenSound: {fileID: 0}
+  doorcloseSound: {fileID: 0}
+  walkSound: {fileID: 0}
+  runSound: {fileID: 0}
+  spiderwalkSound: {fileID: 0}
 --- !u!4 &619305619
 Transform:
   m_ObjectHideFlags: 0
