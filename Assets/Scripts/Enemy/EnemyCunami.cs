@@ -5,79 +5,25 @@ public class EnemyCunami : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxChaseDistance = 15f;
 
-    private Vector3 _spawnPosition;
     private bool _isFrozen = false;
     private bool _isFollowing = false;
-    private bool _isLampFollowing = false;
-    
-    private Transform _targetLamp;
 
     private void Start()
     {
-        speed = PlayerController.Instance.movingSpeed;
-        _spawnPosition = transform.position;
+        speed = PlayerController.Instance.movingSpeed * 1.5f; // быстрее игрока
     }
+
     private void Update()
     {
-        
         if (PlayerController.Instance == null) return;
         if (_isFrozen) return;
-        
-        float distanceToPlayer = Vector3.Distance(transform.position, PlayerController.Instance.transform.position);
 
-        // 💡 Приоритет лампы
-        if (_isLampFollowing)
-        {
-            FollowLamp();
-            return;
-        }
-
-        // 🏃 Преследование игрока
         if (_isFollowing)
         {
-            if (distanceToPlayer <= maxChaseDistance)
-            {
-                FollowPlayer();
-            }
-            else
-            {
-                _isFollowing = false;
-            }
-        }
-        else
-        {
-            ReturnToSpawn();
+            FollowPlayer();
         }
     }
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        // ☠️ убивает игрока
-        if (collision.TryGetComponent(out PlayerController player))
-        {
-            player.Death();
-        }
-    }
-    protected virtual void OnTriggerStay2D(Collider2D collision)
-    {
-      
-        if (collision.TryGetComponent(out Lamp lamp))
-        {
-            if (lamp.IsOn())
-            {
-                _isFrozen = true;
-                _isFollowing = false;
-                _isLampFollowing = false;
-                _targetLamp = null;
-            }
-        }
 
-       
-        if (collision.TryGetComponent(out Flashlight flashlight) && !_isLampFollowing)
-        {
-            _isFollowing = true;
-        }
-    }
-    
     private void FollowPlayer()
     {
         Vector3 playerPos = PlayerController.Instance.transform.position;
@@ -85,26 +31,45 @@ public class EnemyCunami : MonoBehaviour
 
         transform.position += direction * speed * Time.deltaTime;
     }
-    private void FollowLamp()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_targetLamp == null) return;
+        if (_isFrozen) return;
 
-        Vector3 direction = (_targetLamp.position - transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, _targetLamp.position);
-
-        if (distance > 0.3f) 
+        if (collision.gameObject.CompareTag("Player"))
         {
-            transform.position += direction * speed * Time.deltaTime;
+            collision.gameObject.GetComponent<PlayerController>().Death();
+        }
+        if (collision.gameObject.CompareTag("Lamp"))
+        {
+            if (GetComponent<Lamp>().IsOn())
+            {
+                FreezeEnemy();
+            }
         }
     }
-    private void ReturnToSpawn()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vector3 direction = (_spawnPosition - transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, _spawnPosition);
-
-        if (distance > 0.1f)
+        if (collision.TryGetComponent(out Lamp lamp))
         {
-            transform.position += direction * speed * Time.deltaTime;
+            if (lamp.IsOn())
+            {
+                FreezeEnemy();
+            }
         }
+    }
+    public void StartChase()
+    {
+        if (_isFrozen) return;
+
+        _isFollowing = true;
+    }
+    private void FreezeEnemy()
+    {
+        if (_isFrozen) return; // 🔥 защита
+
+        _isFrozen = true;
+        _isFollowing = false;
+
+        Debug.Log("Enemy frozen!");
     }
 }

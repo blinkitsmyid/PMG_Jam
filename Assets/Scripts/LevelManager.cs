@@ -29,6 +29,6 @@ public class LevelManager : MonoBehaviour
     }
     public bool CanRun()
     {
-        return level >= 2;
+        return level >= 1;
     }
 }
