@@ -1,121 +1,95 @@
-using System;
 using UnityEngine;
 
 public class EnemyLooker : MonoBehaviour
 {
-    public static EnemyLooker Instance { get; private set; }
-    [SerializeField] private float speed;
-    [SerializeField] private float maxChaseDistance = 15f;
-    [SerializeField] private Transform visionLight;
+    [Header("Movement")]
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float chaseSpeedMultiplier = 1.5f;
+    [SerializeField] private float patrolDistance = 3f;
+    [SerializeField] private bool isHorizontal = true;
 
-    private Vector3 _spawnPosition;
-
+    private Vector3 _startPos;
     private bool _isFollowing = false;
-    
+    private float _patrolTimer;
+
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
-        _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
     {
-        speed = PlayerController.Instance.movingSpeed;
-        _spawnPosition = transform.position;
+        _startPos = transform.position;
     }
 
     private void Update()
     {
         if (PlayerController.Instance == null) return;
 
-        Vector3 moveDirection = Vector3.zero;
-        float distanceToPlayer = Vector3.Distance(transform.position, PlayerController.Instance.transform.position);
+        Vector3 dir = Vector3.zero;
 
-        
         if (_isFollowing)
         {
-            if (distanceToPlayer <= maxChaseDistance)
-            {
-                moveDirection = (PlayerController.Instance.transform.position - transform.position).normalized;
-                FollowPlayer();
-            }
-            else
-            {
-                _isFollowing = false;
-            }
+            dir = (PlayerController.Instance.transform.position - transform.position).normalized;
+            transform.position += dir * speed * chaseSpeedMultiplier * Time.deltaTime;
         }
         else
         {
-            moveDirection = Vector3.zero;
+            dir = Patrol();
         }
-        UpdateAnimation(moveDirection);
-  
-        if (visionLight != null && moveDirection != Vector3.zero)
-        {
-            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-            visionLight.rotation = Quaternion.Euler(0, 0, angle - 90);
-        }
+
+        UpdateAnimation(dir);
     }
-    public void StartFollowing()
+
+    private Vector3 Patrol()
+    {
+        float move = Mathf.Sin(Time.time * speed);
+        Vector3 offset;
+
+        if (isHorizontal)
+            offset = new Vector3(move * patrolDistance, 0, 0);
+        else
+            offset = new Vector3(0, move * patrolDistance, 0);
+
+        Vector3 target = _startPos + offset;
+        Vector3 dir = (target - transform.position).normalized;
+
+        transform.position += dir * speed * Time.deltaTime;
+
+        return dir;
+    }
+
+    public void StartChase()
     {
         _isFollowing = true;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // если враг попал в свет лампы
-        if (collision.TryGetComponent(out Lamp lamp))
-        {
-            if (lamp.IsOn())
-            {
-                Respawn();
-            }
-        }
-        
-    }
-
-    private void FollowPlayer()
-    {
-        Vector3 playerPos = PlayerController.Instance.transform.position;
-        Vector3 direction = (playerPos - transform.position).normalized;
-
-        transform.position += direction * speed * Time.deltaTime;
     }
 
     public void Respawn()
     {
-        transform.position = _spawnPosition;
+        Debug.Log("Respawn");
+        transform.position = _startPos;
         _isFollowing = false;
     }
-    
+
     private void UpdateAnimation(Vector3 direction)
     {
         bool isMoving = direction.magnitude > 0.05f;
         _animator.SetBool("IsMoving", isMoving);
 
-        if (!isMoving)
-        {
-            _animator.SetInteger("Direction", 0);
-            return;
-        }
-
-        int dir = 0;
+        if (!isMoving) return;
 
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
-            dir = 1; // Right
+            _animator.SetInteger("Direction", 1);
             _spriteRenderer.flipX = direction.x < 0;
         }
         else
         {
-            dir = 2; // Down
-            
+            _animator.SetInteger("Direction", 2);
         }
-
-        _animator.SetInteger("Direction", dir);
-
-        Debug.Log($"SET DIR: {dir} | direction: {direction}");
     }
 }

@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="01b3aa79-a7af-4d93-9b40-b10c33c9386b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PMG_Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyWatcher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyWatcher.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneForTests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneForTests.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BedRoomDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BedRoomDoor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCunami.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCunami.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLooker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLooker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HintMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HintMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLookerBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLookerBody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyVision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyVision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,6 +134,7 @@
       <workItem from="1774608243799" duration="36426000" />
       <workItem from="1775633449789" duration="4546000" />
       <workItem from="1775821574468" duration="25398000" />
+      <workItem from="1776738318248" duration="5411000" />
     </task>
     <servers />
   </component>

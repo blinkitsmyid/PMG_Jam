@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
@@ -9,7 +8,7 @@ public class EnemyVision : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            enemy.StartFollowing();
+            enemy.StartChase();
         }
     }
 }
